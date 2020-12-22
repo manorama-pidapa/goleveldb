@@ -101,6 +101,30 @@ db, err := leveldb.OpenFile("path/to/db", o)
 defer db.Close()
 ...
 ```
+Create or open a database on SMB Share:
+```go
+type testingStorage struct {
+	Storage
+}
+
+stor, err := storage.OpenSmbFile("path/to/db", "hostname:port", "/sharename", "user", "password", readonly)
+...
+defer stor.Close()
+...
+tstor := &testingStorage{stor}
+
+o := &opt.Options{
+	ErrorIfExist: false,
+}
+
+// The returned DB instance is safe for concurrent use. Which mean that all
+// DB's methods may be called concurrently from multiple goroutine.
+db, err := leveldb.Open(tstor, o)
+...
+defer db.Close()
+...
+```
+```
 Documentation
 -----------
 
