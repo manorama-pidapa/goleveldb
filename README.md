@@ -4,8 +4,7 @@ This is an implementation of the [LevelDB key/value database](http:code.google.c
 
 Installation
 -----------
-
-	go get github.com/syndtr/goleveldb/leveldb
+	go get github.com/manorama-pidapa/goleveldb/leveldb
 
 Requirements
 -----------
