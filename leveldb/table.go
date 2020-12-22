@@ -12,12 +12,12 @@ import (
 	"sort"
 	"sync/atomic"
 
-	"github.com/syndtr/goleveldb/leveldb/cache"
-	"github.com/syndtr/goleveldb/leveldb/iterator"
-	"github.com/syndtr/goleveldb/leveldb/opt"
-	"github.com/syndtr/goleveldb/leveldb/storage"
-	"github.com/syndtr/goleveldb/leveldb/table"
-	"github.com/syndtr/goleveldb/leveldb/util"
+	"github.com/manorama-pidapa/goleveldb/leveldb/cache"
+	"github.com/manorama-pidapa/goleveldb/leveldb/iterator"
+	"github.com/manorama-pidapa/goleveldb/leveldb/opt"
+	"github.com/manorama-pidapa/goleveldb/leveldb/storage"
+	"github.com/manorama-pidapa/goleveldb/leveldb/table"
+	"github.com/manorama-pidapa/goleveldb/leveldb/util"
 )
 
 // tFile holds basic information about a table.
